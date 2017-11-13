@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for the framework",
+  "main": "index.js",
+  "author": "Himujjall",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel ./src --out-dir dist/ --ignore ./node_modules,./src/del.js,./.babelrc,./package.json,./npm-debug.log,./yarn.lock --copy-files",
+    "dev": "nodemon --watch src --ignore src/models/ --ignore src/db/ --exec \"cls && node src/index.js\"",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "3.8",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "tingodb": "^0.5.1",
+    "tungus": "^0.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "fs-force-delete-sync": "^1.0.0"
+  }
+}
